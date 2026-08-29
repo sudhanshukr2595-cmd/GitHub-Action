@@ -5,10 +5,10 @@ on: push
 job:
   firstJob:
     name:jobs:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Running Single command in firstJob
-         run: echo "Hi this is my first job"
-        - name: checking os release for github Hosted runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running Single command in firstJob
+        run: echo "Hi this is my first job"
+      - name:checking OS Release for Github Hosted Runner
          run: cat /etc/os-release
       
