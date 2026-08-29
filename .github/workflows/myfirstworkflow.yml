@@ -26,12 +26,14 @@ jobs:
        sleep 20
   thirdJob:
    name: Job3
+   needs: firstJob
    runs-on: ubuntu-latest
    steps:
     - name: Job with single dependency
       run: sleep 10
   fourthJob:
    name: Job4
+   needs: [firstJob, secondJob, thirdJob]
    runs-on: ubuntu-latest
    steps:
     - name: Job with multiple dependencies
