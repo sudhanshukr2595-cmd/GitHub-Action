@@ -24,4 +24,15 @@ jobs:
        echo "Hi i am sudhanshi"
        echo "current time is 10pm"
        sleep 20
-      
+  thirdJob:
+   name: Job3
+   runs-on: ubuntu-latest
+   steps:
+    - name: Job with single dependency
+      run: sleep 10
+  fourthJob:
+   name: Job4
+   runs-on: ubuntu-latest
+   steps:
+    - name: Job with multiple dependencies
+      run: sleep 10
