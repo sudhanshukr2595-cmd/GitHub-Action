@@ -22,6 +22,6 @@ jobs:
     - name: running multiple name
       run: 
        echo "Hi i am sudhanshi"
-       echo "current time is 10pm
+       echo "current time is 10pm"
        sleep 20
       
