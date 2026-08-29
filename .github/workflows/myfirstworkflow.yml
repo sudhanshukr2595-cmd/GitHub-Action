@@ -4,11 +4,11 @@ on: push
 
 jobs:
   firstJob:
-     name: job1
-     runs-on: ubuntu-latest
-     steps:
-      - name: Running Single command in firstJob
-        run: echo "Hi this is my first job"
-      - name: Checking OS Release for Github Hosted Runner
-        run: cat /etc/os-release
+   name: job1
+   runs-on: ubuntu-latest
+   steps:
+    - name: Running Single command in firstJob
+      run: echo "Hi this is my first job"
+    - name: Checking OS Release for Github Hosted Runner
+      run: cat /etc/os-release
       
