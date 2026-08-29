@@ -10,8 +10,8 @@ jobs:
     - name: Running Single command in firstJob
       run: echo "Hi this is my first job"
     - name: Checking Runner info
-      shell: push
       run: get-computerinfo
+      shell: push
     - name: calling sleep
       run: sleep 20
   secondJob:
