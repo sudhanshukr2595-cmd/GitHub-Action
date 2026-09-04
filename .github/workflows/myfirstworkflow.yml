@@ -8,35 +8,16 @@ jobs:
    name: job1
    runs-on: windows-latest
    steps:
-    - name: Running Single command in firstJob
-      run: echo "Hi this is my first job"
-    - name: Checking Runner info
-      shell: pwsh
-      run: get-computerinfo
-    - name: calling sleep
-      run: sleep 20
-  secondJob:
-   name: Job2
-   runs-on: ubuntu-latest
-   steps:
-    - name: Checking the Hostname for runner
-      run: hostname
-    - name: running multiple name
-      run: 
-       echo "Hi i am sudhanshi"
-       echo "current time is 10pm"
-       sleep 20
-  thirdJob:
-   name: Job3
-   needs: firstJob
-   runs-on: ubuntu-latest
-   steps:
-    - name: Job with single dependency
-      run: sleep 10
-  fourthJob:
-   name: Job4
-   needs: [firstJob, secondJob, thirdJob]
-   runs-on: ubuntu-latest
-   steps:
-    - name: Job with multiple dependencies
-      run: sleep 10
+    - name: Step-1
+      run: |
+       pwd
+       ls -ltr
+       hostname
+    - name: Step-2 - Checkout
+      uses: actions/checkout@v5.1.0
+    - name: Step-3
+      run: |
+        pwd
+        ls -ltr
+        hostname
+       
