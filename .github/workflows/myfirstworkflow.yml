@@ -13,7 +13,7 @@ jobs:
        pwd
        hostname
     - name: Step-2 - Checkout
-      uses: actions/checkout@v5.1.0
+      uses: actions/checkout@v7.0.1
     - name: Step-3
       run: |
        echo 'pwd' >>myartifacts.tst
@@ -21,6 +21,6 @@ jobs:
     - name: Upload single file
       uses: actions/upload-artifact@v7.0.1
       with:
-       name: single file
-        path:./myartifact.txt
+       name: single_file
+       path: ./myartifact.txt
        
