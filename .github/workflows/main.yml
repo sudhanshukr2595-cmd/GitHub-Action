@@ -1,0 +1,29 @@
+# File: .github/workflows/push-all-branches.yml
+# Language: YAML
+
+name: Push Workflow
+
+# Define the events that trigger this workflow
+on:
+  push:
+    branches:        # Applies to all branches
+      - '**'
+
+# Define jobs to run
+jobs:
+  example-job:
+    runs-on: ubuntu-latest  # Platform where the job runs
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Checks out the repository
+
+      - name: Set up Node.js (optional example)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run a Script
+        run: |
+          echo "This workflow runs on every push to any branch."
+          echo "Current branch: $GITHUB_REF"
