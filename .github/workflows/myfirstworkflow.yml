@@ -37,7 +37,6 @@ jobs:
        name: multiple_paths_with_exclusions
        path:
         ./myartifact.txt
-Job2:
  name: JOB2
  run-on: ubuntu-latest
  steps:
