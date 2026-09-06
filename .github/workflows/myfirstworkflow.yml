@@ -40,7 +40,7 @@ jobs:
        pwd
        ls -ltr
     - name: Download single file artifact
-      uses: actions/download-artifact@v7.0.1
+      uses: actions/download-artifact@v1.0.4
       with:
        name: single file
     - name: checking current directory post download
