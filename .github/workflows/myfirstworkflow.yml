@@ -3,8 +3,6 @@ name: myfirstworkflow
 on:
  push:
   branches: 
-   - dev
-   - 'feature-*'
    - main
  pull_request:
   branches:
@@ -49,4 +47,3 @@ jobs:
        ls -ltr
         artifacts/
         !**/hostname.txt
-       
