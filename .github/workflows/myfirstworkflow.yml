@@ -37,13 +37,8 @@ jobs:
       run:
        pwd
        ls -ltr
-    - name: Download single file artifact
+    - name: Upload a Build Artifact
       uses: actions/upload-artifact@v7.0.1
       with:
-       name: single file
-    - name: checking current directory post download
-      run:
-       pwd
-       ls -ltr
-        artifacts/
-        !**/hostname.txt
+       name: single_file
+       path: ./myartifact.txt
