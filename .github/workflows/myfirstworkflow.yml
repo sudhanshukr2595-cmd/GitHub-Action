@@ -50,5 +50,5 @@ jobs:
     - name: referring Environment Variable
       run:
        echo"[INFO] running Deployment for $ENV_TYPE with user $APP_USER."
-       echo "[INFO] once deployed app is accessiable on port 80"
+       echo "[INFO] once deployed app is accessiable on port $APP_PORT"
       
