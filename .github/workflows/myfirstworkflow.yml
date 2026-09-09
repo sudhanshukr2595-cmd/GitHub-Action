@@ -48,7 +48,9 @@ jobs:
        name: single_file
        path: ./myartifact.txt
     - name: referring Environment Variable
-      run:
+      run: |
        echo"[INFO] running Deployment for $ENV_TYPE with user $APP_USER."
        echo "[INFO] once deployed app is accessiable on port $APP_PORT"
-      
+    - name: Referring Repository Secrets
+      run: |
+       echo"[INFO] Application password is ${{ secrets.$APP_PASSWORD }}"
