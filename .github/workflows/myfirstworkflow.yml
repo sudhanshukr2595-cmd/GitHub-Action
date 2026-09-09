@@ -44,11 +44,11 @@ jobs:
        ls -ltr
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v7.0.1
+      with:
+       name: single_file
+       path: ./myartifact.txt
     - name: referring Environment Variable
       run:
        echo"[INFO] running Deployment for $ENV_TYPE with user $APP_USER."
        echo "[INFO] once deployed app is accessiable on port 80"
       
-      with:
-       name: single_file
-       path: ./myartifact.txt
